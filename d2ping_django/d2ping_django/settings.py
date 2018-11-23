@@ -25,12 +25,13 @@ SECRET_KEY = 'b#gjz_6e3l&ai+1x#egh09np^2ywf-4%7o(zrz3yer%bfpkhuf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['localhost','192.168.100.18']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'd2ping',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

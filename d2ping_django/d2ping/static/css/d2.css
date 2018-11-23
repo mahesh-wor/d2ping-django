@@ -1,0 +1,134 @@
+.window1{
+	position: absolute;
+	border:1px solid #5A6566;
+	margin:auto;
+	width:730px;
+	height:760px;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:#202526
+
+}
+.window2{
+	position: absolute;
+
+	margin:auto;
+	width:590px;
+	height:700px;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+
+	background:#202526
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #51626B !important;
+}
+
+.cbtn{
+	background:    #425158;
+background:    -webkit-linear-gradient(#546770, #425158 50%, #546770);
+background:    linear-gradient(#546770, #425158 50%, #546770);
+border:        2px solid #999999;
+border-radius: 2px;
+padding:       8px 20px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal 400 25px/1 "Calibri", sans-serif;
+text-align:    center;
+text-shadow:   none;
+width:250px;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 2px;
+    width:300px;    //Specify your width here
+}
+.window3{
+	position: absolute;
+	margin:auto;
+	width:500px;
+	height:300px;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:#202526
+
+}
+.pingtext{
+	text-align: center;
+	color:#FFFFFF;
+	font-size:24px;
+	font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.pingtext1{
+	color:#DDDDDD;
+	font-size:14px
+	width: 40px;
+	height: 400px;
+}
+body{
+	background:#070708 !important;
+
+}
+
+.row{
+  width: 559px;
+}
+
+.row div{
+
+  float:left;
+  width: 180px;
+  height: 55px;
+  margin: auto;
+  color: white;
+}
+
+.my_sev
+            {
+                font-family:    courier, Helvetica, sans-serif;
+                font-size:      18px;
+
+            }
+
+.my_ping
+            {
+                font-family:    courier, Helvetica, sans-serif;
+                font-size:      14px;
+            }
+
+.text-muted{
+	font-family:    courier, Helvetica, sans-serif;
+	font-size: 15px;
+}
+.wrapper {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.button1 {
+    background-color: #566770 !important;
+    border:1px solid #DDDDDD;
+    border-radius: 1px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+}
+.mid{
+	text-align: center;
+}
