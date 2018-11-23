@@ -3,7 +3,7 @@
 	border:1px solid #5A6566;
 	margin:auto;
 	width:730px;
-	height:760px;
+	height:740px;
 	top:0;
 	left:0;
 	right:0;
@@ -16,7 +16,7 @@
 
 	margin:auto;
 	width:590px;
-	height:700px;
+	height:675px;
 	top:0;
 	left:0;
 	right:0;
@@ -54,7 +54,7 @@ width:250px;
 	position: absolute;
 	margin:auto;
 	width:500px;
-	height:300px;
+	height:250px;
 	top:0;
 	left:0;
 	right:0;
@@ -130,5 +130,6 @@ body{
     font-size: 24px;
 }
 .mid{
+
 	text-align: center;
 }

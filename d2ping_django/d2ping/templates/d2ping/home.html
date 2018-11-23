@@ -18,13 +18,9 @@
     	margin: 0;
     	}
     .bg {
-    	/* The image used */
     	background-image: url("{% static 'img/doto.jpg' %}");
-
-    	/* Full height */
     	height: 100%;
 
-    	/* Center and scale the image nicely */
     	background-position: center;
     	background-repeat: no-repeat;
     	background-size: cover;
@@ -38,38 +34,34 @@
         <div class="window2">
     			<p class="pingtext">SELECT MATCHMAKING REGIONS<pre><form><input type="checkbox" name="Ping All" checked><span class="pingtext1"> Automatically pick best region based on my location.</span></form></pre></p>
     			<pre><div style="font-size:18px;color:#DDDDDD;text-align:center;">Or</div></pre>
-    			<span class="pingtext1">Select up to three matchmaking regions. Select only the regions closest to you for the best experience.</p>
+    			<div class="pingtext1">Select up to three matchmaking regions. Select only the regions closest to you for the best experience.</div>
 
         <div class="window3">
-
 
               <div class="row">
                     {% for sevinfo in sevinfo %}
                         {% if sevinfo.ping == 'unknown' %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='text-muted';><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping: {{ sevinfo.ping }}</div></div>
+                          <div class='text-muted';><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}</div></div>
                         {% elif sevinfo.ping <= 100 %}
                           <div class='my_sev'><img  src="{% static 'img/light.png' %}" style="width: 28px;height: 28px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s3.png' %}" style="width: 17px;height: 12px;margin-left:3px;margin-right:5px">ping: {{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s3.png' %}" style="width: 17px;height: 12px;margin-left:3px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
                         {% elif sevinfo.ping <= 150 %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s2.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping: {{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s2.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
                         {% elif sevinfo.ping <= 200 %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s1.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping: {{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s1.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
                         {% elif sevinfo.ping > 200 %}
                           <div class='my_sev' ><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping' ><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping: {{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping' ><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
                         {% endif %}
                     {% endfor %}
-
               </div>
               <br>
               <div class="mid">
                 <button type="button" class="cbtn" onclick="">Refresh Pings</button>
               </div>
-
-
       </div>
       </div>
 
