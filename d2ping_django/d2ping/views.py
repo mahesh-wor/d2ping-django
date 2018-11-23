@@ -19,8 +19,10 @@ sevinfo=[
 {'sev_name':'South America','sevip':'gru.valve.net','ping':'unknown'},
 {'sev_name':'China UC-1','sevip':'221.228.192.0','ping':150},
 {'sev_name':'China TC','sevip':'221.228.192.0','ping':'unknown'},
-{'sev_name':'China UC-2','sevip':'221.228.192.0','ping':'unknown'},
+{'sev_name':'China UC-2','sevip':'221.228.192.0','ping':'23'},
 ]
+
+
 def index(request):
     context = {
         'sevinfo': sevinfo
