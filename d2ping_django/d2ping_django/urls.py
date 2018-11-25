@@ -18,7 +18,7 @@ from django.conf import settings
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('d2ping/',include('d2ping.urls')),
-    path('',include('d2ping.urls'))
+    path('',include('d2ping.urls')),
     ]

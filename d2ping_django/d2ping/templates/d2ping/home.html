@@ -40,27 +40,30 @@
 
               <div class="row">
                     {% for sevinfo in sevinfo %}
+
                         {% if sevinfo.ping == 'unknown' %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
                           <div class='text-muted';><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}</div></div>
                         {% elif sevinfo.ping <= 100 %}
                           <div class='my_sev'><img  src="{% static 'img/light.png' %}" style="width: 28px;height: 28px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s3.png' %}" style="width: 17px;height: 12px;margin-left:3px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s3.png' %}" style="width: 17px;height: 12px;margin-left:3px;margin-right:5px">ping:{{ sevinfo.ping }} ms</div></div>
                         {% elif sevinfo.ping <= 150 %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s2.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s2.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }} ms</div></div>
                         {% elif sevinfo.ping <= 200 %}
                           <div class='my_sev'><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping'><img  src="{% static 'img/s1.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping'><img  src="{% static 'img/s1.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }} ms</div></div>
                         {% elif sevinfo.ping > 200 %}
                           <div class='my_sev' ><img  src="{% static 'img/dark.png' %}" style="width: 18px;height: 18px;margin-right:5px">{{ sevinfo.sev_name }}
-                          <div class='my_ping' ><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }}ms</div></div>
+                          <div class='my_ping' ><img  src="{% static 'img/s0.png' %}" style="width: 17px;height: 12px;margin-right:5px">ping:{{ sevinfo.ping }} ms</div></div>
                         {% endif %}
                     {% endfor %}
               </div>
               <br>
               <div class="mid">
-                <button type="button" class="cbtn" onclick="">Refresh Pings</button>
+                      <form action="{% url 'ping-check' %}">
+                      <input class="cbtn" type="submit" value="Refresh Pings" />
+                      </form>
               </div>
       </div>
       </div>
