@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    context: DOCKER_PASS
+    context: d2ping
     working_directory: ~/d2ping-django
     docker:
       - image: python:3.6-buster # primary container for the build job
@@ -29,6 +29,7 @@ jobs:
 
       - setup_remote_docker:
           version: 19.03.12
+          context: d2ping
 
       - run: |
           apt update && apt install -y docker.io
