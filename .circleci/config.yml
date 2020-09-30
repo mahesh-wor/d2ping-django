@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    context: DOCKER_PASS
     working_directory: ~/d2ping-django
     docker:
       - image: python:3.6-buster # primary container for the build job
