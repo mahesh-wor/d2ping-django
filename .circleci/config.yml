@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/d2ping-django
+    docker:
+      - image: python:3.6  # primary container for the build job
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
+      - run:
+          name: Install Python deps in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          paths:
+            - "venv"
+      - run:
+          command: |
+            . venv/bin/activate
+            python manage.py makemigrations
+            python manage.py migrate
