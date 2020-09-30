@@ -31,8 +31,9 @@ jobs:
 
       - run: |
           apt update && apt install -y docker.io
+          echo $DOCKER_PASS
 
-      - run: echo $DOCKER_PASS | docker login docker.pkg.github.com -u $DOCKER_USER --password-stdin 
+      - run: echo $DOCKER_PASS | docker login docker.pkg.github.com -u mahesh-wor --password-stdin 
       # build the application image
       - run: docker build -t docker.pkg.github.com/mahesh-wor/d2ping-django/d2-django:1.0 ~/d2ping-django/
 
