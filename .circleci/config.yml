@@ -27,7 +27,7 @@ jobs:
             python manage.py migrate
 
       - setup_remote_docker:
-        version: 19.03.12
+          version: 19.03.12
       - run: echo "$DOCKER_PASS" | docker login docker.pkg.github.com -u mahesh-wor --password-stdin 
 
       # build the application image
