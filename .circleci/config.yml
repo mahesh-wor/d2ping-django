@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/d2ping-django
     docker:
-      - image: python:3.6  # primary container for the build job
+      - image: 3.6-buster # primary container for the build job
     steps:
       - checkout
       - restore_cache:
