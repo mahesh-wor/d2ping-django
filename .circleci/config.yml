@@ -28,7 +28,9 @@ jobs:
 
       - setup_remote_docker:
           version: 19.03.12
+
       - run: |
+          echo apt update && apt install docker.io
           echo "$DOCKER_PASS" | docker login docker.pkg.github.com -u mahesh-wor --password-stdin 
 
       # build the application image
