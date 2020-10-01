@@ -1,3 +1,4 @@
+FROM python:3.6-buster
 RUN mkdir -p /usr/src/app
 
 #Copy Source
